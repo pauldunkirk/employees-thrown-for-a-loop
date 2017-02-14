@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  var personArray = [
+  var personArray = [  // this will eventually be replaced by our database
     {name: 'Tom', yearsOfExperience: 10},
     {name: 'Celina', yearsOfExperience: 4},
     {name: 'Kris', yearsOfExperience: 14 }
@@ -9,8 +9,12 @@ $(document).ready(function(){
 
   function years (array){
     var totalYears = 0;
-    $('#employeeTable').empty();
+    $('#employeeTable').empty(); // empty table before each loop
     array.forEach(function(employee){
+      //called array loops length to function employee
+      //var populates years of experience into totalYears var
+      // tr and td created in employeeTable
+      //employee.name etc means name property(key) of that array is put in that td - same for yearsOfExperience and totalYears
       totalYears += employee.yearsOfExperience;
       $('#employeeTable').append(
         '<tr>' +
@@ -20,7 +24,7 @@ $(document).ready(function(){
         '</tr>'
       );
     });
-    return totalYears;
+    return totalYears; // need to call this to populate table
   }
 
 
@@ -29,18 +33,13 @@ $(document).ready(function(){
  // input name, val() back to a var
  // create a new employee object with key name and our var as populating variable, and
  // and yearas of Experience key populating with yearsHere variable (both of which we just got from the input fields)
-// then we push this new employee object into the personArray (hard coding?)
-// then we call the years function, passing in personArray as parameter (hard coding?)
+// then we push this new employee object into the personArray (hard coding? no. working with our array of objects)
+// then we call the years function, passing in personArray as parameter
   $('#submit').on('click', function(){
-    var newName = $('#name').val();
+    var newName = $('#name').val(); //.val() means get info from input
     var yearsHere = parseInt($('#yearsHere').val());
     var newEmployeeObject = {name: newName, yearsOfExperience: yearsHere};
     personArray.push(newEmployeeObject);
     years(personArray);
   });
 });
-
-// //Pro Mode - New Employee
-// New people are getting added to out company every day. (We're growing!)
-// Create a form that allows new employees to be added to our array
-// and be displayed on the page.
