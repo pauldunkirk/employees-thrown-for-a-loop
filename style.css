@@ -1,7 +1,7 @@
 body {
     background: linear-gradient(to left, #0099F7 , #F11712);
     text-align: center;
-    transform: scale(.7);
+    transform: scale(.5);
 }
 input {
   padding: 30px;
@@ -63,3 +63,25 @@ h1 {
   border-width: 50px;
   font-size: 300%;
 }
+#totalYears {
+  background: linear-gradient(to left, #F11712 , #0099F7);
+  position: relative;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  width: 80%;
+  font-size: 250%;
+  border-radius: 5%;
+  border-style: solid;
+  border-style: groove;
+  border-width: 50px;
+}
+ h3 {
+   border: solid 4px #707070;
+   box-shadow: 0 0 5px 1px #969696;
+   border-radius: 50%;
+   margin: 30px;
+   border-style: groove;
+   border-width: 50px;
+   font-size: 300%;
+ }

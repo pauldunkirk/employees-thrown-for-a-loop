@@ -10,19 +10,19 @@
 <body>
   <h1>Employees Thrown for a Loop</h1>
 
+<form>
     <label for="name"></label>
     <input type="text" name="name" placeholder="Name" id="name">
     <label for="yearsHere"></label>
     <input type="text" name="yearsHere" placeholder="Years of Experience" id='yearsHere'>
-
-    <button type="button" id="submit">Submit</button>
+    <button type="submit" id="submit">Submit</button>
+</form>
 
   <table>
     <thead>
       <tr>
         <th>Name</th>
         <th>Years of Experience</th>
-        <th>Acme Electric's Total Years of Employee Experience</th>
       </tr>
     </thead>
 
@@ -30,6 +30,7 @@
     </tbody>
   </table>
 
+<h3>Total Years of Experience: <span id="totalYears">0</span></h3>
 
 </body>
 </html>
